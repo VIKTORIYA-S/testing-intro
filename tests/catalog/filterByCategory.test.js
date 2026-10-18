@@ -32,19 +32,17 @@ describe('filterByCategory', () => {
     expect(result.map((product) => product.id)).toEqual([4, 5]);
   });
 
-  // test.todo("'clothes' возвращает пустой массив");
 test("'clothes' возвращает пустой массив", () => {
   const result = filterByCategory(products, 'clothes');
   expect(result.map((product) => product.id)).toEqual([]);
 });
 
-  // test.todo("'toys' возвращает пустой массив");
 test("'toys' возвращает пустой массив", () => {
   const result = filterByCategory(products, 'toys');
   expect(result.map((product) => product.id)).toEqual([]);
 });
-  // test.todo("'sports' возвращает пустой массив");
-test("'sports' возвращает пустой массив", () => {
+
+  test("'sports' возвращает пустой массив", () => {
   const result = filterByCategory(products, 'sports');
   expect(result.map((product) => product.id)).toEqual([]);
 });
