@@ -4,8 +4,17 @@ function notImplemented() {
 
 function addToCart() { return notImplemented(); }
 function changeQuantity() { return notImplemented(); }
-function removeFromCart() { return notImplemented(); }
-function calculateCartSubtotal() { return notImplemented(); }
+function removeFromCart(cart, id) {
+  return cart.filter((product) => product.id !== id);
+}
+function calculateCartSubtotal(cart) {
+  const initialValue = 0;
+  const sumWithInitial = cart.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price * currentValue.quantity,
+    initialValue,
+  );
+  return sumWithInitial;
+}
 function calculateOrderTotal() { return notImplemented(); }
 
 const cartApi = { addToCart, changeQuantity, removeFromCart, calculateCartSubtotal, calculateOrderTotal };
